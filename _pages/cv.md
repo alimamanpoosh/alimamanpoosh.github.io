@@ -7,81 +7,123 @@ redirect_from:
   - /resume
 ---
 
-#### COMPUTER ENGINEERING STUDENT
-
-- B.Sc. candidate in Computer Engineering, University of Isfahan
-- GitHub: [alimamanpoosh](https://github.com/alimamanpoosh)
-- Email: ali.mamanpoosh2002@gmail.com
-- Phone: (+98) 09162858829
-- LinkedIn: [ali-mamanpoosh-742897222](https://www.linkedin.com/in/ali-mamanpoosh-742897222)
+### Personal Information
+- **Name:** Ali M’amanpoosh
+- **Email:** ali.mamanpoosh2002@gmail.com
+- **Phone:** (+98) 09162858829
+- **GitHub:** [https://github.com/alimamanpoosh](https://github.com/alimamanpoosh)
+- **LinkedIn:** [ali-mamanpoosh-742897222](https://www.linkedin.com/in/ali-mamanpoosh-742897222)
 
 ## Education
-### University of Isfahan
-- Bachelor of Science in Computer Engineering (2020–2024), GPA: 3.05
-
-### Harati High School
-- High School Diploma in Mathematics and Physics (2017–2020), GPA: 3.73
+- **B.Sc. in Computer Engineering**
+  - University of Isfahan — 2020–2024
+- **Diploma in Mathematics & Physics**
+  - Harati High School — 2017–2020
 
 ## Research Interests
 - AI-enabled Software Engineering
 - Large Language Models (LLMs)
 - Vision–Language Models (VLMs)
 - Retrieval-Augmented Generation (RAG)
-- Knowledge Graphs and text-to-RDF conversion
-- Semantic analysis of technical text
-- Machine Learning and Deep Learning
+- Knowledge Graph Construction (Text-to-RDF)
+- Semantic Analysis of Technical Documents
+- Machine Learning & Deep Learning
 
-## Publications
-- **PersianCLEVR for Bilingual 3D Visual Reasoning** (NeurIPS 2025 Workshop VLM4RWD, Regular Spotlight) – Second Author.
-- **VAGUE-Gate: Plug-and-Play Local‑Privacy Shield for Retrieval‑Augmented Generation** (IJCNLP–AACL 2025 Main) – Second Author.
-- **ScenePhy: Controllable Physics Videos for World‑Model Evaluation** (NeurIPS 2025 Workshop EWM) – Third Author.
-- **Automated Fault Diagnosis in IoT Systems through Semantic Analysis of Long‑Form Textual Data** (Internet of Things and Applications 2025) – First Author.
-- **A Novel Solution for Enhancing Rail Transport Safety Using AI and Wearable Sensor Technology in Real‑Time Train Operator Monitoring** (ICITRES Conference 2025) – Co‑First Author.
+## Publications (All 2025)
+1. **From Scenes to Semantics: PersianCLEVR for Bilingual 3D Visual Reasoning**
+   - *NeurIPS 2025 Workshop VLM4RWD — Regular Spotlight*
+   - Second Author
+2. **VAGUE-Gate: Plug-and-Play Local-Privacy Shield for Retrieval-Augmented Generation**
+   - *IJCNLP–AACL 2025 — Main Track*
+   - Second Author
+3. **ScenePhy: Controllable Physics Videos for World-Model Evaluation**
+   - *NeurIPS 2025 Workshop EWM*
+   - Third Author
+4. **Automated Fault Diagnosis in IoT Systems through Semantic Analysis of Long-Form Textual Data**
+   - *IoT 2025 Conference*
+   - First Author
+5. **Enhancing Rail Transport Safety Using AI & Wearable Sensors for Real-Time Operator Monitoring**
+   - *ICIRES 2025 Conference*
+   - Co-First Author
 
-## Research Experiences
-- **Research in bilingual 3D visual reasoning (VLMs)** — Prof. Afsaneh Fatemi, University of Isfahan (Aug 2025 – Nov 2025). Worked on vision–language models for 3D scene understanding and compositional reasoning.
-- **Research in physics‑aware vision‑language modelling** — Prof. Afsaneh Fatemi, University of Isfahan (Jul 2025 – Sep 2025). Developed and evaluated models for world‑modeling and physics‑aware video understanding.
-- **Research in differential privacy for RAG** — Prof. Afsaneh Fatemi, University of Isfahan (Jul 2025 – Aug 2025). Designed a locally privacy‑preserving gating mechanism for LLM‑based retrieval‑augmented generation systems.
-- **Research in soil health knowledge graphs using LLMs** — Prof.dr Anna Fensel, Wageningen University and Research (Mar 2025 – Present). Text‑to‑RDF conversion and validation methods for domain‑specific knowledge graphs with LLMs.
-- **Research in semantic analysis of long‑form technical text** — Dr. Hossein Karshenas, University of Isfahan (Feb 2023 – Sep 2025). NLP‑based semantic analysis and fault diagnosis for IoT system logs and technical documents.
-- **Research in computer vision for safety‑critical systems** — Dr. Mahmudreza Changizian (Nov 2024 – Mar 2025). Computer vision and wearable sensing for real‑time train operator monitoring.
-- **Research in computer vision engineering** — Institute for Research in Fundamental Sciences (IPM) (Jul 2023 – Oct 2023). Designed an eye‑tracking system to monitor monkey eyes for task‑related behavior and neuron activity.
+## Research Experience
+- **Bilingual 3D Visual Reasoning (VLMs)**
+  - University of Isfahan — Aug 2025–Nov 2025
+  - Supervisor: Prof. Afsaneh Fatemi
+- **Physics-Aware Video Reasoning & World Models**
+  - University of Isfahan — Jul 2025–Sep 2025
+  - Supervisor: Prof. Afsaneh Fatemi
+- **Privacy-Preserving RAG (Differential Privacy)**
+  - University of Isfahan — Jul 2025–Aug 2025
+  - Supervisor: Prof. Afsaneh Fatemi
+- **Soil-Health Knowledge Graphs Using LLMs**
+  - Wageningen University & Research — Mar 2025–Present
+  - Supervisor: Prof.dr Anna Fensel
+- **Semantic Analysis of Long-Form Technical Text**
+  - University of Isfahan — Feb 2023–Sep 2025
+  - Supervisor: Dr. Hossein Karshenas
+- **Computer Vision for Safety-Critical Environments**
+  - Nov 2024 – Mar 2025
+  - Supervisor: Dr. Mahmudreza Changizian
+- **Computational Neuroscience Vision Project (Eye Tracking)**
+  - Institute for Research in Fundamental Sciences (IPM) — Jul 2023–Oct 2023
 
-## Teaching Experiences
-- **Teaching Assistant for Natural Language Processing and Speech Processing** — Dr. Hamidreza Baradaran, University of Isfahan (Feb 2025 – Present).
-- **Teaching Assistant for Theory of Automata and Formal Languages** — Dr. S. M. Mostafavi, University of Isfahan (Sep 2023 – Jan 2024).
-- **Teaching Assistant for Fundamentals of Artificial Intelligence and Applications** — Dr. S. M. Mostafavi, University of Isfahan (Sep 2023 – Jan 2024).
-- **Teaching Assistant for Human‑Computer Interaction** — Dr. Fakhroddin Noorbehbahani, University of Isfahan (Sep 2023 – Jan 2024).
-- **Teaching Assistant for UI Design and HCI** — Dr. Atefeh Nirumand, University of Isfahan (Sep 2023 – Jan 2024).
-- **Teaching Assistant for Advanced Programming** — Dr. Mojtaba Mahdavi, University of Isfahan (Sep 2022 – Jun 2023).
-- **Teaching Assistant for Object‑Oriented Analysis and Design (OOAD)** — Dr. Mohammadreza Sharbaaf, University of Isfahan (Feb 2023 – Jun 2023).
-- **Teaching Assistant for Formal Languages and Automata** — Dr. Seyed Mostafa Mostafavi Targi, University of Isfahan (Feb 2023 – Jun 2023).
+## Teaching Assistantships
+- **NLP and Speech Processing**
+  - Feb 2025 – Present — Dr. Hamidreza Baradaran
+- **Theory of Automata & Formal Languages**
+  - Sep 2023 – Jan 2024 — Dr. S. M. Mostafavi
+- **Fundamentals of Artificial Intelligence**
+  - Sep 2023 – Jan 2024 — Dr. S. M. Mostafavi
+- **Human–Computer Interaction (HCI)**
+  - Sep 2023 – Jan 2024 — Dr. F. Noorbehbahani
+- **UI Design & HCI**
+  - Sep 2023 – Jan 2024 — Dr. Atefeh Nirumand
+- **Advanced Programming (C++)**
+  - Feb 2022 – Jun 2023 (Two Semesters) — Dr. Mojtaba Mahdavi
+- **Object-Oriented Analysis and Design (OOAD)**
+  - Feb 2023 – Jun 2023 — Dr. MohammadReza Sharbaf
+- **Formal Languages & Automata**
+  - Feb 2023 – Jun 2023 — Dr. S. M. Mostafavi
 
-## Working Experiences
-- **Freelance Machine Learning Engineer** (Jan 2022 – Present). Worked on AI and software projects for various clients, including chatbot design and custom tools for code and text processing.
-- **QML Programmer, BEHYAAR Co.** (Jul 2021 – Feb 2022). Designed and developed user interfaces for PFD/MFD in aircraft systems using QML and C++.
+## Work Experience
+- **Freelance Machine Learning Engineer**
+  - Jan 2022 – Present
+  - ML model development, chatbots, custom LLM pipelines, automation tools.
+- **QML Programmer — BEHYAAR Co.**
+  - Jul 2021 – Feb 2022
+  - Developed UI systems for aircraft (PFD/MFD) using QML + C++.
 
 ## Internships
-- **ISL Lab, University of Isfahan** (Feb 2023 – Present). Research in topic modeling and semantic analysis of textual corpora.
+- **Institute for Intelligent Systems (ISL), University of Isfahan**
+  - Feb 2023 – Present
+  - Topic modeling, semantic analysis, AI for technical documents.
 
 ## Technical Skills
-- **ML & LLM:** PyTorch, TensorFlow, scikit‑learn, LangChain, Keras
-- **Programming:** Python (Advanced), C++, C
-- **Tools:** NumPy, Pandas, Matplotlib, PyQt, Django, QML
+- **Machine Learning / AI**
+  - PyTorch, TensorFlow, scikit-learn, LangChain, Keras
+- **Programming**
+  - Python (Advanced), C++, C
+- **Tools & Frameworks**
+  - NumPy, Pandas, Matplotlib
+  - PyQt, QML, Django
 
-## Certificates & Selected Courses
-- Finetuning Large Language Models; Large Language Models (LLMs) Concepts – DeepLearning.AI, DataCamp.
-- Natural Language Processing with Classification and Vector Spaces; Advanced Learning Algorithms; Supervised Machine Learning: Regression and Classification – DeepLearning.AI / Stanford.
-- Programming for Everybody (Getting Started with Python) and Python Data Structures – University of Michigan, Coursera.
+## Certificates
+- **Finetuning Large Language Models** — DeepLearning.AI
+- **LLM Concepts** — DataCamp
+- **NLP with Classification & Vector Spaces** — Stanford/DeepLearning.AI
+- **Supervised ML (Regression & Classification)** — Stanford
+- **Advanced Learning Algorithms** — Stanford
+- **Python Specialization** — University of Michigan
 
 ## Languages
 - **Persian:** Native
-- **English:** Upper‑Intermediate
+- **English:** Upper-Intermediate
 
-## Volunteering Activity
-- **TEDx University of Isfahan, Head of Logistics Team** (Jul 2021 – Jan 2023).
-- **TEDx University of Isfahan, Logistics Team Member** (Jun 2020 – Jul 2021).
+## Volunteering
+- **TEDx University of Isfahan**
+  - Head of Logistics — Jul 2021 – Jan 2023
+  - Logistics Member — Jun 2020 – Jul 2021
 
-## References
-- Hossein Karshenas — Artificial Intelligence Department, University of Isfahan.
-- Afsaneh Fatemi Khorasgani — Algorithms and Software Department, University of Isfahan.
+## Sports
+- Boxing (2024 – Present)
