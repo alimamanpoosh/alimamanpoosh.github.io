@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Mamanpoosh | Researcher</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Manrope (Body) & JetBrains Mono (Code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            850: '#152033',
+                            900: '#0f172a', /* Dark Blue Background */
+                        },
+                        amber: {
+                            450: '#d97706', /* Bronze/Gold accent */
+                            500: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'], /* Body Font */
+                        mono: ['JetBrains Mono', 'monospace'], /* Code Font */
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Styles */
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        /* Glassmorphism */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Blinking Cursor for Typewriter */
+        .cursor-blink {
+            display: inline-block;
+            width: 3px;
+            background-color: #d97706; /* Amber color */
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d97706;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-500 selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-nav" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-mono text-xl font-bold tracking-tight hover:text-amber-500 transition-colors flex items-center gap-2">
+                <i class="fas fa-terminal text-amber-500"></i> Ali_Mamanpoosh
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
+                <a href="#news" class="hover:text-amber-400 transition-colors">News</a>
+                <a href="#publications" class="hover:text-amber-400 transition-colors">Publications</a>
+                <a href="#research" class="hover:text-amber-400 transition-colors">Research</a>
+                <a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-slate-300 hover:text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700 p-4 absolute w-full">
+            <div class="flex flex-col space-y-4 text-center">
+                <a href="#about" class="text-slate-300 hover:text-amber-400" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+                <a href="#news" class="text-slate-300 hover:text-amber-400" onclick="document.getElementById('mobile-menu').classList.add('hidden')">News</a>
+                <a href="#publications" class="text-slate-300 hover:text-amber-400" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Publications</a>
+                <a href="#research" class="text-slate-300 hover:text-amber-400" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Research</a>
+                <a href="#contact" class="text-slate-300 hover:text-amber-400" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+
+        <!-- Animated Background Orbs -->
+        <div class="absolute top-20 right-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl -z-10 animate-float"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -z-10 animate-float-delayed"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-800/20 rounded-full blur-3xl -z-20"></div>
+
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Text Content -->
+            <div class="order-2 md:order-1 reveal">
+                <!-- Status Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-wider text-amber-500 uppercase bg-amber-500/10 rounded-full border border-amber-500/20">
+                    <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                    <span>Graduated &middot; B.Sc. in Computer Engineering</span>
+                </div>
+
+                <!-- TYPEWRITER CONTAINER -->
+                <div class="font-mono mb-6 leading-tight min-h-[160px] md:min-h-[180px]">
+                    <div class="text-2xl md:text-3xl text-slate-300 mb-2">
+                        <span id="typewriter-line1"></span><span id="cursor1" class="cursor-blink">&nbsp;</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold">
+                        <span id="typewriter-line2" class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600"></span><span id="cursor2" class="cursor-blink hidden">&nbsp;</span>
+                    </h1>
+                </div>
+
+                <p class="text-slate-400 text-lg mb-8 leading-relaxed max-w-lg font-light">
+                    I am a researcher specializing in <strong class="text-slate-200 font-semibold">Vision-Language 3D Scene Reasoning</strong>, <strong class="text-slate-200 font-semibold">LLMs & Privacy-Preserving RAG</strong>, and <strong class="text-slate-200 font-semibold">Multimodal Knowledge Graphs</strong>. Graduated in Computer Engineering from the <span class="text-slate-200 font-medium">University of Isfahan</span>.
+                </p>
+
+                <!-- Call to Actions -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <!-- Collaboration Button -->
+                    <a href="mailto:ali.mamanpoosh2002@gmail.com?subject=Request%20for%20Collaboration" target="_blank" rel="noopener noreferrer" class="group relative px-6 py-3 bg-white text-slate-900 font-bold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:-translate-y-1 text-center">
+                        <span class="relative z-10 flex items-center justify-center gap-2">
+                            <i class="fas fa-handshake text-amber-600 group-hover:text-amber-500 transition-colors"></i>
+                            Let's Collaborate
+                        </span>
+                    </a>
+
+                    <div class="flex gap-4">
+                        <a href="Ali_Mamanpoush_CV.pdf" target="_blank" class="flex-1 sm:flex-none px-6 py-3 border border-slate-700 text-slate-300 font-medium rounded-lg hover:border-amber-500 hover:text-white hover:bg-slate-800 transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fas fa-file-alt"></i> CV (PDF)
+                        </a>
+                        <a href="https://github.com/alimamanpoosh" target="_blank" class="flex-1 sm:flex-none px-6 py-3 border border-slate-700 text-slate-300 font-medium rounded-lg hover:border-amber-500 hover:text-white hover:bg-slate-800 transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Collaboration Note -->
+                <p class="text-sm text-slate-500 italic mb-8 border-l-2 border-slate-700 pl-3">
+                    Interested in working together? Please click the collaboration button above or email me directly at <a href="mailto:ali.mamanpoosh2002@gmail.com" class="text-amber-500 hover:underline">ali.mamanpoosh2002@gmail.com</a>.
+                </p>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-6 text-2xl text-slate-500">
+                    <a href="https://www.linkedin.com/in/ali-mamanpoosh-742897222/" target="_blank" class="hover:text-blue-500 hover:-translate-y-1 transition-all duration-300" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:ali.mamanpoosh2002@gmail.com?subject=Request%20for%20Collaboration" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 hover:-translate-y-1 transition-all duration-300" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://scholar.google.com/citations?user=HLO3NIsAAAAJ&hl=en" target="_blank" class="hover:text-blue-400 hover:-translate-y-1 transition-all duration-300" title="Google Scholar"><i class="fab fa-google-scholar"></i></a>
+                    <a href="https://github.com/alimamanpoosh" target="_blank" class="hover:text-slate-200 hover:-translate-y-1 transition-all duration-300" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="order-1 md:order-2 flex justify-center reveal delay-200">
+                <div class="relative group cursor-pointer perspective-1000">
+                    <!-- Animated Glow -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-pulse-slow"></div>
+
+                    <!-- Image Container -->
+                    <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border border-slate-700 bg-slate-800 transform transition-transform duration-500 group-hover:rotate-1 group-hover:scale-[1.02]">
+                        <img src="profile.jpg"
+                             onerror="this.src='images/profile.png'"
+                             alt="Ali Mamanpoosh"
+                             class="w-full h-full object-cover transition transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
+
+                        <!-- Overlay on Hover -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white font-bold tracking-wide translate-y-4 group-hover:translate-y-0 transition-transform duration-300 font-mono">Ali_Mamanpoosh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-24 bg-slate-900 relative">
+        <!-- Subtle Pattern -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 reveal">
+                <span class="w-1 h-8 bg-amber-500 rounded-full"></span>
+                Latest Updates
+            </h2>
+
+            <div class="space-y-8 border-l border-slate-800 ml-3 reveal">
+
+                <!-- News Item 1: ACL ARR 2026 -->
+                <div class="relative pl-8 group hover:translate-x-2 transition-transform duration-300">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors ring-4 ring-slate-900"></span>
+                    <span class="text-xs font-bold tracking-widest text-amber-500 mb-1 block uppercase font-mono">May 2026 (Submission)</span>
+                    <p class="text-slate-300">
+                        Submitted <strong>"When 1+1 ≠ 2: Benchmarking Civil-Time Reasoning in Large Language Models"</strong> (introducing <span class="text-white font-semibold">CIVILBENCH</span>) to <span class="text-white font-semibold">ACL ARR 2026</span>.
+                    </p>
+                </div>
+
+                <!-- News Item 2: JoWS Q1 -->
+                <div class="relative pl-8 group hover:translate-x-2 transition-transform duration-300">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors ring-4 ring-slate-900"></span>
+                    <span class="text-xs font-bold tracking-widest text-amber-500 mb-1 block uppercase font-mono">2026 (Under Review)</span>
+                    <p class="text-slate-300">
+                        Paper <strong>"Direct Image-to-RDF Knowledge Graph Construction from Scientific Visualizations using Large Vision-Language Models"</strong> under review at <span class="text-white font-semibold">Journal of Web Semantics (JoWS, Q1)</span> with Wageningen University & Research.
+                    </p>
+                </div>
+
+                <!-- News Item 3: EACL 2026 Workshop -->
+                <div class="relative pl-8 group hover:translate-x-2 transition-transform duration-300">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors ring-4 ring-slate-900"></span>
+                    <span class="text-xs font-bold tracking-widest text-amber-500 mb-1 block uppercase font-mono">2026 (Accepted)</span>
+                    <p class="text-slate-300">
+                        Paper <strong>"Unmasking the Factual-Conceptual Gap in Persian Language Models"</strong> (introducing <span class="text-white font-semibold">DIVANBENCH</span>) accepted at <span class="text-white font-semibold">EACL 2026 Workshop (SilkRoadNLP)</span>.
+                    </p>
+                </div>
+
+                <!-- News Item 4: NeurIPS 2025 PersianClevr -->
+                <div class="relative pl-8 group hover:translate-x-2 transition-transform duration-300">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors ring-4 ring-slate-900"></span>
+                    <span class="text-xs font-bold tracking-widest text-amber-500 mb-1 block uppercase font-mono">Late 2025 (Accepted)</span>
+                    <p class="text-slate-300">
+                        Paper <strong>"From Scenes to Semantics: PersianClevr for Bilingual 3D Visual Reasoning"</strong> accepted at <span class="text-white font-semibold">NeurIPS 2025 Workshop (VLM4RWD)</span>.
+                    </p>
+                </div>
+
+                <!-- News Item 5: NeurIPS 2025 ScenePhys -->
+                <div class="relative pl-8 group hover:translate-x-2 transition-transform duration-300">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors ring-4 ring-slate-900"></span>
+                    <span class="text-xs font-bold tracking-widest text-amber-500 mb-1 block uppercase font-mono">Late 2025 (Published)</span>
+                    <p class="text-slate-300">
+                        Paper <strong>"ScenePhys — Controllable Physics Videos for World-Model Evaluation"</strong> published at <span class="text-white font-semibold">NeurIPS 2025 Workshop on Evaluation of World Models (EWM)</span>.
+                    </p>
+                </div>
+
+                <!-- News Item 6: AACL 2025 VAGUE-Gate -->
+                <div class="relative pl-8 group hover:translate-x-2 transition-transform duration-300">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors ring-4 ring-slate-900"></span>
+                    <span class="text-xs font-bold tracking-widest text-amber-500 mb-1 block uppercase font-mono">2025 (Accepted)</span>
+                    <p class="text-slate-300">
+                        <strong>"VAGUE-Gate: A Plug-and-Play Local-Privacy Shield for Retrieval-Augmented Generation"</strong> accepted at the main track of <span class="text-white font-semibold">AACL 2025</span>.
+                    </p>
+                </div>
+
+                <!-- News Item 7: Wageningen Research -->
+                <div class="relative pl-8 group hover:translate-x-2 transition-transform duration-300">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors ring-4 ring-slate-900"></span>
+                    <span class="text-xs font-bold tracking-widest text-amber-500 mb-1 block uppercase font-mono">March 2025 – Present</span>
+                    <p class="text-slate-300">
+                        Conducting research on Knowledge Graph Construction using Vision-Language Models with Prof.dr Anna Fensel at <span class="text-white font-semibold">Wageningen University and Research</span>.
+                    </p>
+                </div>
+
+                <!-- News Item 8: IoT 2025 -->
+                <div class="relative pl-8 group hover:translate-x-2 transition-transform duration-300">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors ring-4 ring-slate-900"></span>
+                    <span class="text-xs font-bold tracking-widest text-amber-500 mb-1 block uppercase font-mono">2025 (Publishing)</span>
+                    <p class="text-slate-300">
+                        Paper <strong>"Automated Fault Diagnosis in IoT Systems through Semantic Analysis of Long-Form Textual Data"</strong> at <span class="text-white font-semibold">IoT 2025</span>.
+                    </p>
+                </div>
+
+                <!-- News Item 9: ICIRES 2025 -->
+                <div class="relative pl-8 group hover:translate-x-2 transition-transform duration-300">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors ring-4 ring-slate-900"></span>
+                    <span class="text-xs font-bold tracking-widest text-amber-500 mb-1 block uppercase font-mono">2025 (Published)</span>
+                    <p class="text-slate-300">
+                        Paper <strong>"A Novel Solution for Enhancing Rail Transport Safety Using AI and Wearable Sensor Technology in Real-Time Train Operator Monitoring"</strong> published at <span class="text-white font-semibold">ICIRES 2025</span>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-24 relative overflow-hidden">
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl -z-10 animate-float"></div>
+
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 reveal">
+                <span class="w-1 h-8 bg-amber-500 rounded-full"></span>
+                Selected Publications
+            </h2>
+
+            <div class="grid gap-6">
+
+                <!-- 1. CIVILBENCH (ACL ARR 2026) -->
+                <div class="glass-card p-8 rounded-2xl hover:border-amber-500/30 transition-all duration-300 group reveal hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/5 border-l-4 border-l-amber-500">
+                    <div class="flex flex-col md:flex-row gap-6 justify-between items-start">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-100 mb-3 group-hover:text-amber-400 transition-colors leading-snug">
+                                When 1+1 ≠ 2: Benchmarking Civil-Time Reasoning in Large Language Models
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                Kianoosh Vadaei, Melika Shirian, Arshia Hemmat, Mohammad Hossein Shaker Ardakani, <span class="text-white font-bold border-b-2 border-amber-500/50">Ali Mamanpoosh</span>, Matin Moqadas, Amirmasoud Rismanchian, Afsaneh Fatemi
+                            </p>
+                            <div class="inline-flex items-center px-3 py-1 rounded bg-amber-500/10 text-xs font-mono text-amber-500 mb-5 border border-amber-500/20 font-bold">
+                                <i class="fas fa-hourglass-half mr-2"></i> ACL ARR 2026 (May Submission) &middot; Under Review
+                            </div>
+                            <ul class="text-slate-400 text-sm space-y-1 list-disc list-inside">
+                                <li>Co-developed <strong class="text-slate-200">CIVILBENCH</strong>, a benchmark for evaluating civil-time reasoning in large language models.</li>
+                                <li>Fine-tuned and evaluated multiple open-source LLMs across zero-shot, few-shot, and fine-tuned settings.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. JoWS Q1 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-amber-500/30 transition-all duration-300 group reveal hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/5">
+                    <div class="flex flex-col md:flex-row gap-6 justify-between items-start">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-100 mb-3 group-hover:text-amber-400 transition-colors leading-snug">
+                                Direct Image-to-RDF Knowledge Graph Construction from Scientific Visualizations using Large Vision-Language Models
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                Beichen Wang, <span class="text-white font-bold border-b-2 border-amber-500/50">Ali Mamanpoosh</span>, Carmel Suchard, Anna Fensel
+                            </p>
+                            <div class="inline-block px-3 py-1 rounded bg-slate-800 text-xs font-mono text-amber-500 mb-5 border border-slate-700 font-bold">
+                                Journal of Web Semantics (JoWS, Q1) &middot; Under Review
+                            </div>
+                            <ul class="text-slate-400 text-sm space-y-1 list-disc list-inside">
+                                <li>Developed image-to-RDF pipelines constructing knowledge graphs directly from scientific visualizations using VLMs.</li>
+                                <li>Extracted structured semantic relations and generated RDF triples without intermediate manual annotation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. VAGUE-Gate (AACL 2025) -->
+                <div class="glass-card p-8 rounded-2xl hover:border-amber-500/30 transition-all duration-300 group reveal hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/5">
+                    <div class="flex flex-col md:flex-row gap-6 justify-between items-start">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-100 mb-3 group-hover:text-amber-400 transition-colors leading-snug">
+                                VAGUE-Gate: A Plug-and-Play Local-Privacy Shield for Retrieval-Augmented Generation
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                Arshia Hemmat, Matin Moqadas, <span class="text-white font-bold border-b-2 border-amber-500/50">Ali Mamanpoosh</span>, Amirmasoud Rismanchian, Afsaneh Fatemi
+                            </p>
+                            <div class="inline-block px-3 py-1 rounded bg-slate-800 text-xs font-mono text-amber-500 mb-5 border border-slate-700 font-bold">
+                                AACL 2025 (Main Track) &middot; Accepted
+                            </div>
+                            <ul class="text-slate-400 text-sm space-y-1 list-disc list-inside mb-4">
+                                <li>Co-ideated VAGUE-GATE and designed semantic adaptive chunking as a plug-and-play &epsilon;-LDP privacy gate for LLMs.</li>
+                                <li>Built the blended-sensitivity dataset PrivRAG / BlendPriv and evaluated 30+ privacy-preserving RAG variants.</li>
+                            </ul>
+                            <div class="flex gap-4">
+                                <a href="https://openreview.net/pdf?id=yMkOZ406WH" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                                    <i class="far fa-file-pdf"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. PersianCLEVR (NeurIPS 2025 Spotlight) -->
+                <div class="glass-card p-8 rounded-2xl hover:border-amber-500/30 transition-all duration-300 group reveal hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/5">
+                    <div class="flex flex-col md:flex-row gap-6 justify-between items-start">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-100 mb-3 group-hover:text-amber-400 transition-colors leading-snug">
+                                From Scenes to Semantics: PersianCLEVR for Bilingual 3D Visual Reasoning
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                Kianoosh Vadaei*, Melika Shirian*, Arshia Hemmat*, Mohammad Hassan Heydari, <span class="text-white font-bold border-b-2 border-amber-500/50">Ali Mamanpoosh<sup>&dagger;</sup></span>, Afsaneh Fatemi (*Equal, <sup>&dagger;</sup>Evaluation Lead)
+                            </p>
+                            <div class="inline-flex items-center px-3 py-1 rounded bg-amber-500/10 text-xs font-mono text-amber-500 mb-5 border border-amber-500/20 font-bold shadow-[0_0_10px_rgba(245,158,11,0.2)]">
+                                <i class="fas fa-star mr-2 animate-pulse"></i> NeurIPS 2025 Workshop (VLM4RWD) &middot; Accepted
+                            </div>
+                            <ul class="text-slate-400 text-sm space-y-1 list-disc list-inside mb-4">
+                                <li>Second author & evaluation lead: designed the metric suite (BLEU, METEOR, ROUGE, LLM-as-a-Judge) and evaluation pipeline.</li>
+                                <li>Exposed zero-shot vs. few-shot failure modes of instructed VLMs across Persian and English.</li>
+                            </ul>
+                            <div class="flex gap-4">
+                                <a href="https://openreview.net/pdf/a545f2756a22a951a8df7cbd598f83e87ca1ce1f.pdf" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                                    <i class="far fa-file-pdf"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. ScenePhys (NeurIPS 2025 EWM) -->
+                <div class="glass-card p-8 rounded-2xl hover:border-amber-500/30 transition-all duration-300 group reveal hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/5">
+                    <div class="flex flex-col md:flex-row gap-6 justify-between items-start">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-100 mb-3 group-hover:text-amber-400 transition-colors leading-snug">
+                                ScenePhys — Controllable Physics Videos for World-Model Evaluation
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                Arshia Hemmat, Emad Aghahosseini, Alireza Nasri, Mohammad Hossein Shaker Ardakani, Amirmasoud Rismanchian, <span class="text-white font-bold border-b-2 border-amber-500/50">Ali Mamanpoosh</span>, Afsaneh Fatemi
+                            </p>
+                            <div class="inline-block px-3 py-1 rounded bg-slate-800 text-xs font-mono text-amber-500 mb-5 border border-slate-700 font-bold">
+                                NeurIPS 2025 Workshop (EWM) &middot; Published
+                            </div>
+                            <ul class="text-slate-400 text-sm space-y-1 list-disc list-inside mb-4">
+                                <li>Dataset & evaluation lead: created the ScenePhys controllable physics video benchmark and authored test clips.</li>
+                                <li>Built an LLM-as-a-Judge pipeline with rubric-based prompts and structured scoring for world models.</li>
+                            </ul>
+                            <div class="flex gap-4">
+                                <a href="https://scenephys.github.io/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                                    <i class="fas fa-globe"></i> Project Page
+                                </a>
+                                <a href="https://openreview.net/pdf/d06f6e56fb7e34ad06ec8ef303f4893c44de710c.pdf" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                                    <i class="far fa-file-pdf"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. DIVANBENCH (EACL 2026 SilkRoadNLP) -->
+                <div class="glass-card p-8 rounded-2xl hover:border-amber-500/30 transition-all duration-300 group reveal hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/5">
+                    <div class="flex flex-col md:flex-row gap-6 justify-between items-start">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-100 mb-3 group-hover:text-amber-400 transition-colors leading-snug">
+                                Unmasking the Factual-Conceptual Gap in Persian Language Models
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                Alireza Sakhaeirad, <span class="text-white font-bold border-b-2 border-amber-500/50">Ali Mamanpoosh</span>, Arshia Hemmat
+                            </p>
+                            <div class="inline-block px-3 py-1 rounded bg-slate-800 text-xs font-mono text-amber-500 mb-5 border border-slate-700 font-bold">
+                                EACL 2026 Workshop on NLP for Similar Languages, Varieties and Dialects (SilkRoadNLP) &middot; Accepted
+                            </div>
+                            <ul class="text-slate-400 text-sm space-y-1 list-disc list-inside">
+                                <li>Co-developed <strong class="text-slate-200">DIVANBENCH</strong> with 315 questions evaluating cultural conceptual reasoning across three task types.</li>
+                                <li>Evaluated seven Persian LLMs and uncovered agreeableness bias and performance bottlenecks.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. IoT 2025 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-amber-500/30 transition-all duration-300 group reveal hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/5">
+                    <div class="flex flex-col md:flex-row gap-6 justify-between items-start">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-100 mb-3 group-hover:text-amber-400 transition-colors leading-snug">
+                                Automated Fault Diagnosis in IoT Systems through Semantic Analysis of Long-Form Textual Data
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                <span class="text-white font-bold border-b-2 border-amber-500/50">Ali Mamanpoosh</span>, Hossein Karshenas
+                            </p>
+                            <div class="inline-block px-3 py-1 rounded bg-slate-800 text-xs font-mono text-amber-500 mb-5 border border-slate-700 font-bold">
+                                Internet of Things and Applications (IoT 2025) &middot; Publishing
+                            </div>
+                            <ul class="text-slate-400 text-sm space-y-1 list-disc list-inside">
+                                <li>First author & pipeline lead: designed an end-to-end hierarchical semantic chunking and summarization pipeline.</li>
+                                <li>Applied LLMs to long-form technical IoT logs and evaluated summary quality using LLM-as-a-Judge protocols.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Rail Transport Safety (ICIRES 2025) -->
+                <div class="glass-card p-8 rounded-2xl hover:border-amber-500/30 transition-all duration-300 group reveal hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-500/5">
+                    <div class="flex flex-col md:flex-row gap-6 justify-between items-start">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-100 mb-3 group-hover:text-amber-400 transition-colors leading-snug">
+                                A Novel Solution for Enhancing Rail Transport Safety Using AI and Wearable Sensor Technology in Real-Time Train Operator Monitoring
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                Pouriya Heidary Velni, <span class="text-white font-bold border-b-2 border-amber-500/50">Ali Mamanpoosh</span>, Mahmudreza Changizian
+                            </p>
+                            <div class="inline-block px-3 py-1 rounded bg-slate-800 text-xs font-mono text-amber-500 mb-5 border border-slate-700 font-bold">
+                                4th International Conference on Innovation and Research in Engineering Sciences (ICIRES 2025) &middot; Published
+                            </div>
+                            <ul class="text-slate-400 text-sm space-y-1 list-disc list-inside">
+                                <li>Co-first author & AI lead: implemented real-time YOLO/CNN eye-closure fatigue detection fused with wearable sensors.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-16 text-center reveal">
+                <a href="https://scholar.google.com/citations?user=HLO3NIsAAAAJ&hl=en" target="_blank" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-800 text-slate-200 font-bold hover:bg-slate-700 hover:text-white transition-all duration-300 border border-slate-700 hover:border-amber-500">
+                    View Full Google Scholar Profile <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Activities & Collaborations Section -->
+    <section id="research" class="py-24 bg-slate-900 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 reveal">
+                <span class="w-1 h-8 bg-amber-500 rounded-full"></span>
+                Research Experience & Collaborations
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <!-- 1. Wageningen -->
+                <div class="glass-card p-6 rounded-2xl reveal">
+                    <span class="text-xs font-mono text-amber-500 font-bold">Mar 2025 – Present</span>
+                    <h3 class="text-lg font-bold text-slate-100 mt-1 mb-2">Knowledge Graph Construction using VLMs</h3>
+                    <p class="text-sm text-slate-300 font-medium mb-3">Wageningen University and Research (WUR) &middot; Prof.dr Anna Fensel</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Developed image-to-RDF pipelines for automated knowledge graph construction directly from scientific visualizations using large vision-language models.
+                    </p>
+                </div>
+
+                <!-- 2. PersianClevr -->
+                <div class="glass-card p-6 rounded-2xl reveal">
+                    <span class="text-xs font-mono text-amber-500 font-bold">Aug 2025 – Nov 2025</span>
+                    <h3 class="text-lg font-bold text-slate-100 mt-1 mb-2">Bilingual 3D Visual Reasoning (VLMs)</h3>
+                    <p class="text-sm text-slate-300 font-medium mb-3">University of Isfahan &middot; Prof. Afsaneh Fatemi</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Worked on vision–language models for 3D scene understanding and compositional reasoning in bilingual settings (Persian & English).
+                    </p>
+                </div>
+
+                <!-- 3. ScenePhys -->
+                <div class="glass-card p-6 rounded-2xl reveal">
+                    <span class="text-xs font-mono text-amber-500 font-bold">Jul 2025 – Sep 2025</span>
+                    <h3 class="text-lg font-bold text-slate-100 mt-1 mb-2">Physics-Aware Vision–Language Modeling</h3>
+                    <p class="text-sm text-slate-300 font-medium mb-3">University of Isfahan &middot; Prof. Afsaneh Fatemi</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Developed and evaluated physics-aware video representations for world modeling and physical consistency in scene understanding.
+                    </p>
+                </div>
+
+                <!-- 4. VAGUE-Gate -->
+                <div class="glass-card p-6 rounded-2xl reveal">
+                    <span class="text-xs font-mono text-amber-500 font-bold">Jul 2025 – Aug 2025</span>
+                    <h3 class="text-lg font-bold text-slate-100 mt-1 mb-2">Differential Privacy for RAG</h3>
+                    <p class="text-sm text-slate-300 font-medium mb-3">University of Isfahan &middot; Prof. Afsaneh Fatemi</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Designed a locally privacy-preserving gating mechanism (&epsilon;-LDP) with semantic adaptive chunking for LLM retrieval-augmented generation.
+                    </p>
+                </div>
+
+                <!-- 5. IoT Karshenas -->
+                <div class="glass-card p-6 rounded-2xl reveal">
+                    <span class="text-xs font-mono text-amber-500 font-bold">Feb 2023 – Sep 2025</span>
+                    <h3 class="text-lg font-bold text-slate-100 mt-1 mb-2">Semantic Analysis of Long-Form Technical Text</h3>
+                    <p class="text-sm text-slate-300 font-medium mb-3">University of Isfahan &middot; Dr. Hossein Karshenas</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Engineered NLP methods for semantic chunking, analysis, and fault diagnosis of IoT system incident logs with LLM-as-a-Judge validation.
+                    </p>
+                </div>
+
+                <!-- 6. Safety-Critical CV -->
+                <div class="glass-card p-6 rounded-2xl reveal">
+                    <span class="text-xs font-mono text-amber-500 font-bold">Nov 2024 – Mar 2025</span>
+                    <h3 class="text-lg font-bold text-slate-100 mt-1 mb-2">Computer Vision for Safety-Critical Systems</h3>
+                    <p class="text-sm text-slate-300 font-medium mb-3">University of Isfahan &middot; Dr. Mahmudreza Changizian</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Developed a multimodal AI monitoring system fusing CNN-based fatigue detection with wearable vital-sign sensors for train operator safety.
+                    </p>
+                </div>
+
+                <!-- 7. IPM Eye Tracking -->
+                <div class="glass-card p-6 rounded-2xl md:col-span-2 reveal">
+                    <span class="text-xs font-mono text-amber-500 font-bold">Jul 2023 – Oct 2023</span>
+                    <h3 class="text-lg font-bold text-slate-100 mt-1 mb-2">Primate Eye-Tracking System Engineering</h3>
+                    <p class="text-sm text-slate-300 font-medium mb-3">Institute for Research in Fundamental Sciences (IPM)</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Designed a precision eye-tracking system to monitor primate ocular movements for task-related behavior and neuron activity recording.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-16 bg-slate-900 text-center relative overflow-hidden" id="contact">
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-2xl font-bold text-slate-200 mb-8">Get in Touch</h2>
+            <div class="flex justify-center gap-10 mb-10">
+                <a href="mailto:ali.mamanpoosh2002@gmail.com?subject=Request%20for%20Collaboration" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-all duration-300 text-3xl hover:-translate-y-2" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/alimamanpoosh" target="_blank" class="text-slate-400 hover:text-white transition-all duration-300 text-3xl hover:-translate-y-2" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com/citations?user=HLO3NIsAAAAJ&hl=en" target="_blank" class="text-slate-400 hover:text-white transition-all duration-300 text-3xl hover:-translate-y-2" title="Google Scholar"><i class="fab fa-google-scholar"></i></a>
+                <a href="https://www.linkedin.com/in/ali-mamanpoosh-742897222/" target="_blank" class="text-slate-400 hover:text-white transition-all duration-300 text-3xl hover:-translate-y-2" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="text-slate-500 text-sm mb-2">
+                Ali Mamanpoosh &middot; B.Sc. Computer Engineering Graduate, University of Isfahan
+            </p>
+            <p class="text-slate-600 text-xs">
+                &copy; 2026 Ali Mamanpoosh.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // TYPEWRITER EFFECT
+        const text1 = "Hello, I'm";
+        const text2 = "Ali Mamanpoosh";
+        const speed = 100; // Typing speed in ms
+        const delayBetweenLines = 500;
+
+        const line1Element = document.getElementById("typewriter-line1");
+        const line2Element = document.getElementById("typewriter-line2");
+        const cursor1 = document.getElementById("cursor1");
+        const cursor2 = document.getElementById("cursor2");
+
+        let i = 0;
+        let j = 0;
+
+        function typeWriter1() {
+            if (i < text1.length) {
+                line1Element.innerHTML += text1.charAt(i);
+                i++;
+                setTimeout(typeWriter1, speed);
+            } else {
+                setTimeout(() => {
+                    cursor1.style.display = "none";
+                    cursor2.classList.remove("hidden");
+                    typeWriter2();
+                }, delayBetweenLines);
+            }
+        }
+
+        function typeWriter2() {
+            if (j < text2.length) {
+                line2Element.innerHTML += text2.charAt(j);
+                j++;
+                setTimeout(typeWriter2, speed);
+            }
+        }
+
+        window.addEventListener('load', typeWriter1);
+
+        // SCROLL REVEAL ANIMATION
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
